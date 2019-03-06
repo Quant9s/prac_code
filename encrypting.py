@@ -50,3 +50,39 @@ encrypted =b'gAAAAABcfqjVHPDYApdEfLCaCFfKz9bYRxXmk7qyxUcD0Igk63UFOSwQLDHcPM4-5MZ
 f = Fernet(key)
 decrypted = f.decrypt(encrypted)
 print(decrypted)
+
+
+
+# from cryptography.fernet import Fernet
+# from getpass import getpass
+# key = b'ohGwXCCp4xIB87b7Utjn9ZELxQ5hSK0VrwccsgSxc6U='
+# F_key = Fernet(key)
+# user = {
+#     'id'          : bytes(F_key.encrypt(input('user id: ').encode())),
+#     'pw'          : bytes(F_key.encrypt(getpass('user pw: ').encode())),
+#     'cert_pw'     : bytes(F_key.encrypt(getpass('user cert_pw: ').encode())),
+#     'server_type' : str(0),
+#     'show_error'  : str(0)}
+
+# print(user['id'])
+# print(user['pw'])
+# print(user['cert_pw'])
+# print(type(user['id']))
+# print(type(user['pw']))
+# print(type(user['cert_pw']))
+# ###
+
+# key = b'ohGwXCCp4xIB87b7Utjn9ZELxQ5hSK0VrwccsgSxc6U='
+# user = {
+#     'id'          : str(F_key.decrypt(user['id']).decode()),
+#     'pw'          : str(F_key.decrypt(user['pw']).decode()),
+#     'cert_pw'     : str(F_key.decrypt(user['cert_pw']).decode()),
+#     'server_type' : str(0),
+#     'show_error'  : str(0)}
+
+# print(user['id'])
+# print(user['pw'])
+# print(user['cert_pw'])
+# print(type(user['id']))
+# print(type(user['pw']))
+# print(type(user['cert_pw']))
