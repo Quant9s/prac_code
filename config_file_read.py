@@ -1,11 +1,11 @@
 from configparser import ConfigParser
-
+import cryptography
 parser = ConfigParser()
 parser.read('dev.ini')
 
 # parser 종류이름 가져오기
 print(parser.sections()) # ['settings','db','files']
-# perser setting 안에 secret_key 가져오기
+# perser setting 안에 secret_key 가져오기n
 print(parser.get('setting','secret_key')) # abc123
 # parser seting 안에 option을 가져오기
 print(parser.options('setting')) # ['debug','secret_key','log_path']
