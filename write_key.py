@@ -26,3 +26,22 @@ key = base64.urlsafe_b64encode(kdf.derive(key_passwd)) # Can only use kdf once
 file = open('key.key','wb')
 file.write(key)
 file.close
+
+
+
+
+import os.path
+
+save_path = 'C:/example/'
+
+name_of_file = raw_input("What is the name of the file: ")
+
+completeName = os.path.join(save_path, name_of_file+".txt")         
+
+file1 = open(completeName, "w")
+
+toFile = raw_input("Write what you want into the field")
+
+file1.write(toFile)
+
+file1.close()
